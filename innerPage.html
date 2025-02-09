@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Join Ultratech Plus, a leading company that values inclusive culture and fosters growth. Explore career opportunities and become part of an innovative team.">
+        <meta name="keywords" content="careers, jobs, Ultratech Plus, work culture, join our team, career opportunities, hybrid model, medical insurance, stock options, parental leave">
+        <meta name="author" content="Ultratech Plus">
+        <title>Careers at Ultratech Plus - Build Your Future with Us</title>
+
+        <link rel="stylesheet" href="./all.min.css">
+        <link rel="stylesheet" href="./careers.css">
+    </head>
+
+    <style>
+        body {
+margin: 0;
+padding: 0;
+    background-color:white;
+}
+.title{
+margin-left:30px;
+}
+.title h1{
+    font-size: 50px;
+    color: black;
+    text-align: left;
+}
+.description{
+    width: 100%;
+    font-size: 20px;
+}
+.Requrments{
+    width: 100%;
+}
+p{
+    font-size: 20px;
+}
+h2{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.form-container {
+  background-color: #EE5A40;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 5%;
+  margin-right:30px;
+  width: 30%;
+  height: 700px;
+}
+
+h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+}
+
+textarea {
+  resize: none;
+}
+
+.file-upload {
+  position: relative;
+  border: 1px dashed #444;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.file-upload input {
+  width: 100%;
+  font-size: 14px;
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+.file-upload span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #888;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox label {
+  font-size: 12px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.bigOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.title, .form-container {
+    flex: 1;
+}
+
+@media (max-width: 500px) {
+    .bigOne {
+        flex-direction: column;
+        align-items: center;
+    }
+    .title{
+        margin-left:5%;
+        width: 100%;
+    }
+    .title h1{
+        width: 100%;
+    }
+    .form-container {
+        width: 80%;
+        margin-left: 5%;
+    }
+    .description , .Requrments{
+        width: 100%;
+    }
+    .contaner{
+        display: none;
+    }
+}
+
+    </style>
+
+    <body>
+    <header >
+        <div class="innerPage">
+            <div class="container">
+                <div class="navbar">
+                    <div class="image">
+                        <img src="./cropped-Mogo_Logo_CMYK-02.png" alt="Logo">
+                    </div>
+                    <div class="contaner" onclick="toggleMenu(this)">
+                        <div class="bar1 baar"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+<div class="bigOne">
+    <div class="title">
+            <h1 id="jobTitle">Lorem, ipsum.</h1>
+        <div class="description"> 
+            <p id="jobDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...
+            </p>
+        </div>
+        <div class="Requrments">
+            <h2>Requrments:</h2>
+            <p id="jobRequirements">Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="Deparment">
+            <h2>Deparment:</h2>
+            <p id="jobDepartment">Lorem ipsum dolor sit</p>
+        </div>
+        <div class="Type">
+            <h2>Type:</h2>
+            <p id="jobType">Lorem ipsum dolor sit</p>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+        <h1>Apply For This Position</h1>
+        <form id="applicationForm" onsubmit="handleFormSubmit(event)">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+    
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="coverLetter">Cover Letter *</label>
+            <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+    
+            <label for="resume">Upload CV/Resume *</label>
+            <div class="file-upload">
+                <input type="file" id="resume" name="resume" accept=".pdf" required>
+                <span>Allowed: .pdf only</span>
+            </div>
+    
+            <div class="checkbox">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <label for="agreement">By Using This Form You Agree With The Storage And Handling Of Your Data By This Website. *</label>
+            </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+    </main> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const jobId = urlParams.get('id'); 
+
+if (jobId) {
+    fetch(`https://web-agent.ultratech-plus.com/careers/${jobId}`)
+        .then(response => response.json()) 
+        .then(data => {
+            document.getElementById('jobTitle').innerText = data.title || 'No title available';
+            document.getElementById('jobDescription').innerText = data.description || 'No description available';
+            document.getElementById('jobRequirements').innerText = data.requirements || 'No requirements available';
+            document.getElementById('jobDepartment').innerText = data.category.department.name || 'No department information available';
+            document.getElementById('jobType').innerText = data.type.name || 'No job type available';
+        })
+} else {
+    console.error('Job ID not found in URL');
+}
+
+</script>
+<script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+                const urlParams = new URLSearchParams(window.location.search);
+        const career_id = urlParams.get("id");
+
+        const formData = new FormData(this);
+
+        const data = {
+            career_id: career_id, 
+            name: formData.get("fullName"),
+            email: formData.get("email"),
+            phone_number: formData.get("phone"),
+            cover_letter: formData.get("coverLetter"),
+            cv: "", 
+            meta: "{}",
+            status: "pending"
+        };
+
+        const file = formData.get("resume");
+        if (file && file.type === "application/pdf") {
+            const fileReader = new FileReader();
+            fileReader.onload = function() {
+                data.cv = fileReader.result; 
+                sendRequest(data);
+            };
+            fileReader.readAsDataURL(file); 
+        } else {
+            sendRequest(data); 
+        }
+    });
+
+    function sendRequest(data) {
+        fetch("https://web-agent.ultratech-plus.com/requests", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Success:", data);
+            
+            // Show success message using SweetAlert
+            Swal.fire({
+                icon: 'success',
+                title: 'Your form has been sent successfully!',
+                showConfirmButton: false,
+                timer: 2000
+            }).then(() => {
+                document.getElementById("applicationForm").reset();
+            });
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+    }
+</script>
+
+</body>
+</html>

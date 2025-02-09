@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+margin: 0;
+padding: 0;
+background-color:#fff;
+font-family: "Chivo", Sans-serif;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -260px; 
+    width: 200px;
+    height: 100vh;
+    background-color: #2474dc3d;
+    transition: 0.5s;
+    z-index: 20;
+    padding: 20px;
+}
+
+.side-menu.show {
+    right: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.colored{
+    background-color: #F7F7F7;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    z-index: 1;
+}
+
+.navbar .image {
+    width: 25%;
+
+}
+
+.navbar .image img {
+    width: 80%; 
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color:#fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.baar{
+    width: 25px;
+}
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-60deg);
+}
+  
+.change .bar2 {
+    opacity: 0;
+}
+  
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.our-culture{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.our-culture h2{
+    font-size: 40px;
+    font-weight: 400;
+}
+.containeer{
+    width: 90%;
+    margin: auto;
+}
+.Whyjoinourteam{
+    text-align: center;
+}
+.Whyjoinourteam h2{
+    font-size: 40px;
+    font-weight: 400;
+    color: #000;
+    margin-top: 50px;
+}
+.Whyjoinourteam p , .our-culture p{
+    font-size: 20px;
+    color: #546f7a;
+}
+.boxs{
+    display: flex;
+    flex-direction: column;
+}
+.itme{
+    background-color: #EE5A40;
+    margin: 5% 0;
+    width: 100%;
+    height: 25vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.itme:hover h3{
+    transform: scale(0.9);
+    transition: all 1s ease-out;
+}
+.logo{
+    width: 30%;
+}
+.logo img{
+    width: 100%;
+    margin-bottom: 10%;
+}
+    @media(min-width:500px){
+
+
+        .bg-image h1{
+            font-size: 46px;
+            line-height: 53px;
+            font-weight: 500;
+        }
+        .sapn-image{
+            left: 80%;
+        }
+        .our-culture h2{
+            font-size: 50px;
+            font-weight: 500;
+
+        }
+        .Whyjoinourteam h2{
+            font-size: 50px;
+            font-weight: 500;
+        }
+        .Whyjoinourteam p , .our-culture p{
+            font-size: 30px;
+        }
+        .itme{
+            font-size: 30px;
+            height: 30vh;
+        }
+        .footer-tittle{
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+
+    @media(min-width:1024px){
+        .contaner{
+            display: none;
+        }
+        .navbar .image {
+            width: 30%;
+            margin-top: -15px;
+        }
+        .navbar .image img {
+            width: 60%; 
+        }
+        .box{
+            display: flex;
+            gap: 20px;
+        }
+        
+        .bg-image h1{
+            font-size: 80px;
+            line-height: 90px;
+            font-weight: 500;
+        }
+        .tittle{
+            width: 50%;
+        }
+        .paragraph{
+            width: 50%;
+        }
+        .our-culture{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .our-culture h2{
+            font-size: 60px;
+        }
+        .Whyjoinourteam p , .our-culture p{
+            font-size: 40px;
+        }
+        .Whyjoinourteam h2  {
+            font-size: 70px;
+        }
+        .boxs{
+            flex-direction: row;
+            gap: 20px;
+        }
+        .itme{
+            width: 30%;
+            height: 40vh;
+        }
+        .footer-tittle{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .box2 input{
+            padding: 10px 20px; 
+
+        
+        }
+        .box2 input::placeholder {
+            font-size: 12px;
+            font-weight:500;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        .footer-inner{
+            font-size: 20px;
+        }
+        .list li a {
+            padding: 10px 23px;
+        }
+        .containeer{
+            width: 90%;
+            margin: auto;
+        }
+    
+    }
+    @media (max-width: 1024px) {
+        .custom-search-container {
+            display: none;
+        }
+        .careerrs-inner-container{
+            display: none;
+        }
+        .careerrs-inner{
+            padding:50px 70px !important;
+            width: 120% !important;
+        }
+    }

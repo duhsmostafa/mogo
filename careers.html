@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join Ultratech Plus, a leading company that values inclusive culture and fosters growth. Explore career opportunities and become part of an innovative team.">
+    <meta name="keywords"
+        content="careers, jobs, Ultratech Plus, work culture, join our team, career opportunities, hybrid model, medical insurance, stock options, parental leave">
+    <meta name="author" content="Ultratech Plus">
+    <title>Careers at Ultratech Plus - Build Your Future with Us</title>
+    <link rel="shortcut icon" href="Ultratech-Plus-Fav-Icon.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="careers.css">
+    <link rel="canonical" href="https://www.ultratechplus.com/careers">
+
+    <style>
+        .custom-search-container {
+            background-color: #000;
+            border-radius: 30px;
+            padding: 20px 50px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .custom-input {
+            background-color: transparent;
+            border-radius: 50px;
+            padding: 10px 20px;
+            flex: 1;
+        }
+
+        .custom-input:focus {
+            box-shadow: none;
+            border-color: #EE5A40;
+        }
+
+        .custom-dropdown {
+            background-color: #EE5A40;
+            /* color: #fff; */
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+        }
+
+        .dropdown-menu li a {
+            border-radius: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="containeer">
+            <div class="navbar">
+                <div class="image">
+                    <img src="./cropped-Mogo_Logo_CMYK-02.png   " alt="Logo">
+                </div>
+                <div class="contaner" onclick="toggleMenu(this)">
+                    <div class="bar1 baar"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section>
+<div class="colored">
+
+    <div class="container">
+        <div class="our-culture">
+            <div class="tittle">
+                <h2>Our Culture</h2>
+            </div>
+            <div class="paragraph">
+                <p>A small sea of handpicked people with oceanic dreams. We’re here to build stuff and tell stories.
+                </p>
+                <p>This is where every voice is valued and contributes to our journey of collective growth and
+                    impact.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+        <div class="hr"></div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="Whyjoinourteam">
+                <h2>Why join our team?</h2>
+                <p>It’s your chance to let your ideas be the driving force behind shaping the future of technology.
+                </p>
+            </div>
+            <div class="boxs">
+                <div class="itme">
+                    <h3>Flexible<br>
+                        Model</h3>
+                </div>
+                <div class="itme">
+                    <h3>Medical <br>
+                        Insurance</h3>
+                </div>
+                <div class="itme">
+                    <h3>Parental <br>
+                        Leave</h3>
+                </div>
+                <div class="itme">
+                    <h3>Loyalty <br>
+                        Benefits </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="custom-search-container container">
+        <div class="d-flex align-items-center gap-3 flex-nowrap">
+            <div class="input-group flex-grow-1">
+                <input type="text" id="searchInput" class="form-control custom-input" placeholder="Search Careers"
+                    aria-label="Search">
+            </div>
+            <div class="dropdown">
+                <button class="btn custom-dropdown dropdown-toggle mt-3" type="button" id="departmentsDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Teams
+                </button>
+                <ul class="dropdown-menu" id="departmentsList" aria-labelledby="departmentsDropdown">
+                    <li><span class="dropdown-item" onclick="reloadData('Teams')">Teams</span></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn custom-dropdown mt-3" type="button" onclick="reloadData('Teams')">
+                    All
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="careerrs" style="background-color: #F7F7F7; padding: 100px 30px; margin-bottom: -30px;">
+        <div class="careerrs-inner-container" id="resultsContainer"
+            style="width: 90%; margin: auto; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around;">
+            <!-- departments will be added here -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./careers.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".our-culture", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".our-culture",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".Whyjoinourteam h2, .Whyjoinourteam p", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: ".Whyjoinourteam",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".itme", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".boxs",
+            start: "top 85%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".custom-search-container", {
+        opacity: 0,
+        y: 50,
+        duration: 1.2,
+        scrollTrigger: {
+            trigger: ".custom-search-container",
+            start: "top 90%",
+            toggleActions: "play none none none"
+        }
+    });
+</script>
+
+</body>
+
+</html>

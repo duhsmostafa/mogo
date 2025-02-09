@@ -121,14 +121,14 @@ font-family: "Chivo", Sans-serif;
 .itme{
     background-color: #EE5A40;
     margin: 5% 0;
-    width: 100%;
-    height: 25vh;
-    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
 }
 .itme:hover h3{
@@ -165,10 +165,7 @@ font-family: "Chivo", Sans-serif;
         .Whyjoinourteam p , .our-culture p{
             font-size: 30px;
         }
-        .itme{
-            font-size: 30px;
-            height: 30vh;
-        }
+
         .footer-tittle{
             font-size: 10px;
             line-height: 10px;
@@ -220,8 +217,7 @@ font-family: "Chivo", Sans-serif;
             gap: 20px;
         }
         .itme{
-            width: 30%;
-            height: 40vh;
+            margin: 5% auto;
         }
         .footer-tittle{
             font-size: 20px;

@@ -13,16 +13,20 @@
     </head>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+
         body {
 margin: 0;
 padding: 0;
     background-color:white;
+    font-family: "Chivo", Sans-serif;
+
 }
 .title{
 margin-left:30px;
 }
 .title h1{
-    font-size: 50px;
+    font-size: 30px;
     color: black;
     text-align: left;
 }
@@ -37,26 +41,14 @@ p{
     font-size: 20px;
 }
 h2{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bolder;
 }
 
 .form-container {
-  background-color: #EE5A40;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   margin-top: 5%;
-  margin-right:30px;
-  width: 30%;
-  height: 700px;
 }
 
-h1 {
-  font-size: 35px;
-  margin-bottom: 20px;
-  color: black;
-  text-align: center;
-}
 
 form {
   display: flex;
@@ -128,16 +120,25 @@ button {
   transition: all 0.3s ease;
 }
 
-
 .bigOne {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
 }
-
-.title, .form-container {
-    flex: 1;
+.btn{
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #EE5A40;
+    list-style-type: none;
+}
+.btn a {
+    text-decoration: none;
+}
+.form-container {
+    position: absolute;
+    top: 18%;
+    left: 35%;
 }
 
 @media (max-width: 500px) {
@@ -207,7 +208,7 @@ button {
     </div>
 
     <div class="form-container">
-        <h1>Apply For This Position</h1>
+        <!-- <h1>Apply For This Position</h1>
         <form id="applicationForm" onsubmit="handleFormSubmit(event)">
             <label for="fullName">Full Name *</label>
             <input type="text" id="fullName" name="fullName" required>
@@ -233,7 +234,8 @@ button {
             </div>
     
             <button type="submit">Submit</button>
-        </form>
+        </form> -->
+        <button class="btn"><a class="btn" href="form.html">Apply Now</a></button>
     </div>
 </div>
     </main> 

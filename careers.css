@@ -118,17 +118,20 @@ font-family: "Chivo", Sans-serif;
     display: flex;
     flex-direction: column;
 }
+.itme h3{
+font-size: 20px;
+}
 .itme{
     background-color: #EE5A40;
     margin: 5% 0;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 15px;
+    font-size: 10px;
     text-align: center;
 }
 .itme:hover h3{

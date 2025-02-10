@@ -94,7 +94,7 @@ font-family: "Chivo", Sans-serif;
     text-align: start;
 }
 .our-culture h2{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
 }
 .containeer{
@@ -205,9 +205,10 @@ font-size: 20px;
         .our-culture{
             flex-direction: row;
             justify-content: space-around;
+            padding-top: 60px;
         }
         .our-culture h2{
-            font-size: 60px;
+            font-size: 30px;
         }
         .Whyjoinourteam p , .our-culture p{
             font-size: 40px;

@@ -24,49 +24,10 @@ document.addEventListener('click', function (event) {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const subscriptionForm = document.getElementById('subscription-form');
-    const subscriptionEmailInput = document.getElementById('subscription-email');
-
-    if (subscriptionForm && subscriptionEmailInput) {
-        subscriptionForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const email = subscriptionEmailInput.value;
-            axios.post('https://web-agent.ultratech-plus.com/notifications/subscribe', {
-                email: email
-            })
-                .then(function (response) {
-                    const successMessage = document.createElement('div');
-                    successMessage.textContent = 'Thank you for subscribing!';
-                    successMessage.classList.add('success-message');
-
-                    document.body.appendChild(successMessage);
-                    setTimeout(() => {
-                        successMessage.remove();
-                    }, 3000);
-
-                    subscriptionEmailInput.value = ''; 
-                })
-                .catch(function (error) {
-                    console.error(error);
-                    const errorMessage = document.createElement('div');
-                    errorMessage.textContent = 'There was an error with your subscription. Please try again.';
-                    errorMessage.classList.add('error-message');
-
-                    document.body.appendChild(errorMessage);
-
-                    setTimeout(() => {
-                        errorMessage.remove();
-                    }, 3000);
-                });
-        });
-    }
-});
 
 const searchInput = document.getElementById("searchInput");
 let careersData = [];
-fetch('https://web-agent.ultratech-plus.com/departments')
+fetch('Here you local or globl API/departments')
     .then((response) => response.json())
     .then((data) => {
         const departmentsList = document.getElementById('departmentsList');
@@ -94,7 +55,7 @@ fetch('https://web-agent.ultratech-plus.com/departments')
             '<li><a class="dropdown-item text-danger">Error loading departments</a></li>';
     });
 
-fetch("https://web-agent.ultratech-plus.com/careers")
+fetch("Here you local or globl API/careers")
     .then((response) => response.json())
     .then((data) => {
         if (Array.isArray(data)) {

@@ -188,7 +188,10 @@ button {
 <div class="bigOne">
     <div class="title">
             <h1 id="jobTitle">Lorem, ipsum.</h1>
-        <div class="description"> 
+            <button style="background-color: #EE5A40; color: #fff; position: absolute; left: 35%; top: 26%; padding: 10px 30px;">
+                <a href="form.html" style="text-decoration: none; color: #fff;">Apply Now</a>
+            </button>
+            <div class="description"> 
             <p id="jobDescription">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit...
             </p>
@@ -210,83 +213,86 @@ button {
 </div>
     </main> 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
-const urlParams = new URLSearchParams(window.location.search);
-const jobId = urlParams.get('id'); 
-
-if (jobId) {
-    fetch(`Here you local or globl API/careers/${jobId}`)
-        .then(response => response.json()) 
-        .then(data => {
-            document.getElementById('jobTitle').innerText = data.title || 'No title available';
-            document.getElementById('jobDescription').innerText = data.description || 'No description available';
-            document.getElementById('jobRequirements').innerText = data.requirements || 'No requirements available';
-            document.getElementById('jobDepartment').innerText = data.category.department.name || 'No department information available';
-            document.getElementById('jobType').innerText = data.type.name || 'No job type available';
-        })
-} else {
-    console.error('Job ID not found in URL');
-}
-
-</script>
-<script>
-    document.getElementById("applicationForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-                const urlParams = new URLSearchParams(window.location.search);
-        const career_id = urlParams.get("id");
-
-        const formData = new FormData(this);
-
-        const data = {
-            career_id: career_id, 
-            name: formData.get("fullName"),
-            email: formData.get("email"),
-            phone_number: formData.get("phone"),
-            cover_letter: formData.get("coverLetter"),
-            cv: "", 
-            meta: "{}",
-            status: "pending"
-        };
-
-        const file = formData.get("resume");
-        if (file && file.type === "application/pdf") {
-            const fileReader = new FileReader();
-            fileReader.onload = function() {
-                data.cv = fileReader.result; 
-                sendRequest(data);
-            };
-            fileReader.readAsDataURL(file); 
-        } else {
-            sendRequest(data); 
-        }
-    });
-
-    function sendRequest(data) {
-        fetch("Here you local or globl API/requests", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Success:", data);
-            
-            Swal.fire({
-                icon: 'success',
-                title: 'Your form has been sent successfully!',
-                showConfirmButton: false,
-                timer: 2000
-            }).then(() => {
-                document.getElementById("applicationForm").reset();
-            });
-        })
-        .catch((error) => {
-            console.error("Error:", error);
-        });
+    const urlParams = new URLSearchParams(window.location.search);
+    const jobId = urlParams.get('id'); 
+    
+    if (jobId) {
+        fetch(`https://web-agent.ultratech-plus.com/careers/${jobId}`)
+            .then(response => response.json()) 
+            .then(data => {
+                document.getElementById('jobTitle').innerText = data.title || 'No title available';
+                document.getElementById('jobDescription').innerText = data.description || 'No description available';
+                document.getElementById('jobRequirements').innerText = data.requirements || 'No requirements available';
+                document.getElementById('jobDepartment').innerText = data.category.department.name || 'No department information available';
+                document.getElementById('jobType').innerText = data.type.name || 'No job type available';
+            })
+    } else {
+        console.error('Job ID not found in URL');
     }
-</script>
+    
+    </script>
+    
+    <script>
+        document.getElementById("applicationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+                    const urlParams = new URLSearchParams(window.location.search);
+            const career_id = urlParams.get("id");
+    
+            const formData = new FormData(this);
+    
+            const data = {
+                career_id: career_id, 
+                name: formData.get("fullName"),
+                email: formData.get("email"),
+                phone_number: formData.get("phone"),
+                cover_letter: formData.get("coverLetter"),
+                cv: "", 
+                meta: "{}",
+                status: "pending"
+            };
+    
+            const file = formData.get("resume");
+            if (file && file.type === "application/pdf") {
+                const fileReader = new FileReader();
+                fileReader.onload = function() {
+                    data.cv = fileReader.result; 
+                    sendRequest(data);
+                };
+                fileReader.readAsDataURL(file); 
+            } else {
+                sendRequest(data); 
+            }
+        });
+    
+        function sendRequest(data) {
+            fetch("https://web-agent.ultratech-plus.com/requests", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Success:", data);
+                
+                // Show success message using SweetAlert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Your form has been sent successfully!',
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(() => {
+                    document.getElementById("applicationForm").reset();
+                });
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
 
 </body>
 </html>
